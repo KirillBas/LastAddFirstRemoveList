@@ -10,5 +10,22 @@ public class Main {
         mal.add(5);
         mal.add(6);
         mal.add(7);
+
+        for (int i =0; i<mal.getSize(); i++) {
+            System.out.println(mal.getIndex(i));
+        }
+
+        System.out.println("========");
+
+        System.out.println(mal.delete(5));
+        System.out.println("========");
+        System.out.println(mal.add(7));
+        System.out.println("========");
+        System.out.println(mal.getValue(7));
+        System.out.println("========");
+
+        for (int i =0; i<mal.getSize(); i++) {
+            System.out.println(mal.getIndex(i));
+        }
     }
 }

@@ -28,19 +28,27 @@ public class MyArrayList {
         return true;
     }
 
-    public int getIndex(int index) {
-        return 1;
+    public Object getIndex(int index) {
+        checkSize(index);
+        return MyArrayList.this.data[index];
     }
 
     public Object getValue(Object o) {
+        for (int i =0; i<data.length; i++) {
+            if (o.equals(data[i])) {
+                return data[i];
+            }
+        }
         return o;
     }
 
     public boolean delete(Object o) {
-        return true;
-    }
-
-    public boolean set(Object oldObj, Object newObj) {
+        for (int i = 0; i< size; i++) {
+            if (o.equals(data[i])) {
+                System.arraycopy(data, i+1, data, i, size-i-1);
+                data[--size]=null;
+            }
+        }
         return true;
     }
 
@@ -51,5 +59,11 @@ public class MyArrayList {
     private void remove() {
         int numMoved = size - 1;
         System.arraycopy(data, 1, data, 0, numMoved);
+    }
+
+    private void checkSize(int index) {
+        if (index>size || index<0) {
+            throw new IndexOutOfBoundsException("Index not found");
+        }
     }
 }
