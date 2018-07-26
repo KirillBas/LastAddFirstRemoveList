@@ -33,13 +33,13 @@ public class MyArrayList {
         return MyArrayList.this.data[index];
     }
 
-    public Object getValue(Object o) {
+    public int getValue(Object o) {
         for (int i =0; i<data.length; i++) {
             if (o.equals(data[i])) {
-                return data[i];
+                return i;
             }
         }
-        return o;
+        return -1;
     }
 
     public boolean delete(Object o) {

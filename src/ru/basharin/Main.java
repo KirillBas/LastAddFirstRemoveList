@@ -1,5 +1,7 @@
 package ru.basharin;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         MyArrayList mal = new MyArrayList(4);
@@ -17,15 +19,7 @@ public class Main {
 
         System.out.println("========");
 
-        System.out.println(mal.delete(5));
-        System.out.println("========");
-        System.out.println(mal.add(7));
-        System.out.println("========");
         System.out.println(mal.getValue(7));
         System.out.println("========");
-
-        for (int i =0; i<mal.getSize(); i++) {
-            System.out.println(mal.getIndex(i));
-        }
     }
 }
