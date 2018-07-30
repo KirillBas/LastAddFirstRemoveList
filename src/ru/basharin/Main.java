@@ -1,10 +1,8 @@
 package ru.basharin;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
-        MyArrayList mal = new MyArrayList(4);
+        IncrementDecrementArrayList mal = new IncrementDecrementArrayList(4);
         mal.add(1);
         mal.add(2);
         mal.add(3);
