@@ -2,7 +2,7 @@ package ru.basharin;
 
 public class Main {
     public static void main(String[] args) {
-        IncrementDecrementArrayList mal = new IncrementDecrementArrayList(4);
+        FirstAddLastRemoveList mal = new FirstAddLastRemoveList(4);
         mal.add(1);
         mal.add(2);
         mal.add(3);

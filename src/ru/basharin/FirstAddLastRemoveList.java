@@ -1,15 +1,15 @@
 package ru.basharin;
 
-public class IncrementDecrementArrayList {
+public class FirstAddLastRemoveList {
     private int defaultCapacity = 16;
     private Object[] data;
     private int size;
 
-    public IncrementDecrementArrayList() {
+    public FirstAddLastRemoveList() {
         this.data = new Object[defaultCapacity];
     }
 
-    public IncrementDecrementArrayList(int capacity) {
+    public FirstAddLastRemoveList(int capacity) {
         if (capacity > 0) {
             this.data = new Object[capacity];
         } else {
@@ -30,7 +30,7 @@ public class IncrementDecrementArrayList {
 
     public Object getIndex(int index) {
         checkSize(index);
-        return IncrementDecrementArrayList.this.data[index];
+        return FirstAddLastRemoveList.this.data[index];
     }
 
     public int getValue(Object o) {
