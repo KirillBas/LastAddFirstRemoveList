@@ -19,5 +19,6 @@ public class Main {
 
         System.out.println(mal.getValue(7));
         System.out.println("========");
+        mal.getIndex(20);
     }
 }

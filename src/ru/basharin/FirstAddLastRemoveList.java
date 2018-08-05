@@ -29,7 +29,11 @@ public class FirstAddLastRemoveList {
     }
 
     public Object getIndex(int index) {
-        checkSize(index);
+        try {
+            checkSize(index);
+        } catch (IndexOutListException e) {
+            System.out.println("Выход за пределы массива " + e);
+        }
         return FirstAddLastRemoveList.this.data[index];
     }
 
@@ -61,9 +65,9 @@ public class FirstAddLastRemoveList {
         System.arraycopy(data, 1, data, 0, numMoved);
     }
 
-    private void checkSize(int index) {
+    private void checkSize(int index) throws IndexOutListException {
         if (index>size || index<0) {
-            throw new IndexOutOfBoundsException("Index not found");
+            throw new IndexOutListException(index);
         }
     }
 }
